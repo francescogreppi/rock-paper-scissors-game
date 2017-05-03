@@ -1,0 +1,62 @@
+button{
+	display:inline-block;
+	outline:none;
+	border:none;
+	background:transparent;
+	cursor:pointer;
+	font-family:$font-primary;
+	&.cta{
+		color:$color-white;
+		font-weight:bold;
+		min-width:120px;
+		background-color: $color-light-green;
+		border-radius:3px;
+		padding:15px;
+		@media only screen and (min-width: 768px) {
+			margin: 0 auto;
+			min-width:180px;
+			padding:20px;
+			font-size:18px;
+		}
+		&:hover{
+			background-color: darken($color-light-green,10%);
+		}
+		&:disabled{
+			cursor: not-allowed;
+			background-color: $color-light-grey;
+		}
+		&.restart{
+			display:none;			
+		}
+	}
+	&.card{
+		width: 70px;
+		height: 70px;
+		border-radius:35px;
+		border:1px solid $color-light-grey;
+		margin: 0 10px;
+		@media only screen and (min-width: 768px) {
+			display:block;
+			margin:30px auto;
+			width:100px;
+			height:100px;
+			border-radius:50px;
+
+		}
+		&:not(:disabled) { 
+			&:hover{
+				background-color: $color-light-grey;
+				&.active{
+					background-color: $color-vermillion;
+				}
+			} 
+		}
+		&:disabled{
+			cursor: not-allowed;
+		}
+		&.active{
+			background-color: $color-vermillion;
+			color: $color-white;
+		}
+	}
+}

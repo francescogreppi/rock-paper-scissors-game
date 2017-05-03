@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>Rock - Paper - Scissors</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+	<section class="nav-container">
+		<div class="grid">
+			<div class="row">
+				<div class="col-s-12">
+					<ul id="nav">
+						<li><a id="gameModeHuman" onclick="gameInstance.setGameMode('gameModeHuman')" class="active">You VS Comp</a></li>
+						<li><a id="gameModeComputer" onclick="gameInstance.setGameMode('gameModeComputer')">Comp VS Comp</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="game-container">
+		<div class="grid">
+			<div class="row">
+				<div class="col-s-12 col-m-4">
+					<div class="player-container player1" id="player1">
+						<h3 id="player-mode">Player 1 - You</h3>
+						<button id="player1-paper" onclick="gameInstance.setHumanSelection('paper')" class="card">Paper</button> 
+						<button id="player1-rock" onclick="gameInstance.setHumanSelection('rock')" class="card">Rock</button> 
+						<button id="player1-scissors" onclick="gameInstance.setHumanSelection('scissors')" class="card">Scissors</button>
+					</div>
+				</div>
+				<div class="col-s-12 col-m-4">
+					<div class="counter-container">
+						<p id="gameState"> </p>
+						<button id="start" class="cta" onclick="gameInstance.startGame()" disabled>Play !</a>
+						<button id="restart" class="cta restart" onclick="gameInstance.restartGame()">Restart</a>
+					</div>
+				</div>
+				<div class="col-s-12 col-m-4">
+					<div class="player-container player2" id="player2">
+						<h3>Player 2 - Computer</h3>
+						<button id="player2-paper" class="card" disabled>Paper</button> 
+						<button id="player2-rock" class="card" disabled>Rock</button> 
+						<button id="player2-scissors" class="card" disabled>Scissors</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
